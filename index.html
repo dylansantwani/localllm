@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+        }
+        
+        .container {
+            background: #fff;
+            padding: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 90vw;
+            max-height: 1900px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        #text {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            resize: none;
+            margin-bottom: 15px;
+        }
+        #response {
+            overflow: hidden; 
+            width: 100%;
+            height:1000px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            resize: none;
+            margin-bottom: 15px;
+        
+        }
+        
+        #text:focus {
+            outline: none;
+            border-color: #6e8efb;
+        }
+        #response:focus {
+            outline: none;
+            border-color: #6e8efb;
+        }
+        
+        button {
+            background-color: #6e8efb;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #5a7ae0;
+        }
+
+        #response, #extra-box {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt Submission</h1>
+        <textarea id="text" type="text" placeholder="Type your prompt here..."></textarea>
+        <button onclick="submitprompt()" type="button">Submit</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <textarea id="response" type="text" placeholder="Response will show up here"></textarea>
+    </div>
+    
+
+    <script src="run.js"></script>
+</body>
+</html>
